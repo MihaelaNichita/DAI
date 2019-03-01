@@ -45,10 +45,16 @@ def printIfEqual1(num,O,D):
     N = num%10
     E = int(num/10)%10
     V = int(num/100)%10
-    if E in [V,N,O,D] or N in [V,O,D] or V in [O,D] or E!=int(num/1000)%10:
-        return
+
+    if E in [V,N,O,D] or N in [V,O,D] or N in [O,D] or E!=int(num/1000)%10:
+        pass
     else:
         print(f"{O}{D}{D}+{O}{D}{D}={E}{V}{E}{N}")
+
+
+def printIfEqual2(num,F,O,R,T,Y):
+    if int(num/100000) == 0:
+        return
 
 
 def printIfEqual2(num,F,O,R,T,Y,E,N):
